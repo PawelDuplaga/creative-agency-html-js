@@ -6,6 +6,8 @@
     align-items: center;
     padding: 24px 0;
 
+    @include fluid-type(430px, 1440px, 24px, 32px);
+
     &__hamburger {
         border: none;
         display: flex;
@@ -18,6 +20,6 @@
     .line {
         width: 24px;
         height: 1px;
-        border-bottom: 1.2px solid $color-primary
+        border-bottom: 1.5px solid $color-primary
     }
 }

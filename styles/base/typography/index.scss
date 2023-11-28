@@ -1,4 +1,5 @@
 @import './type-scale';
+@import '../../abstracts/variables';
 
 @font-face {
   font-family: 'PP Neue Regular';
@@ -8,7 +9,7 @@
 }
 
 html {
-  font-size: calc(100vw / var(--desktop-width) * 10);
+  font-size: calc(100vw / $desktop-width * 10);
 }
 
 body {
@@ -23,9 +24,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p {
-  margin-bottom: 16px;
-}
 
 h1,
 h2,
@@ -38,7 +36,7 @@ h6 {
 
 h1,
 .h1 {
-  @include fluid-type(430px, 1440px, 32px, 48px);
+  @include fluid-type(430px, 1440px, 32px, 72px);
   margin-bottom: 64px;
   line-height: 1.3;
 }

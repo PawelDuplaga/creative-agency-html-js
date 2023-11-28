@@ -1,0 +1,39 @@
+.hero {
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 100ch;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    &__image {
+        position: relative;
+    }
+
+    &__title {
+        color: $color-text-light;
+    }
+
+    &__play {
+        @include center-align;
+        
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        z-index: 2;
+        cursor: pointer;
+        color: $color-text-white;
+        
+        &__text {
+            @include fluid-type(430px, 1440px, 16px, 24px);
+        }
+    }
+
+    span span span {
+        color: $color-text-dark;
+    }
+}
