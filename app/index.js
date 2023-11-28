@@ -14,8 +14,8 @@ class App {
         });
     }
 
-    _render() {
-        this.Lenis.raf();
+    _render(time) {
+        this.Lenis.raf(time);
         requestAnimationFrame(this._render.bind(this));
     }
 }
