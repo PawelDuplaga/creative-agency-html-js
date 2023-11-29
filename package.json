@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.29",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "split-type": "^0.3.4"
   }
 }
