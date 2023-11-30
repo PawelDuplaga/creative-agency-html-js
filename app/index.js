@@ -6,6 +6,7 @@ import TextReveal from './animations/TextReveal';
 class App {
     constructor(){
         this._createTextReveals();
+        this._createButtonsAnimation()
         this._createObserver();
         this._createLenis();
         this._render();
@@ -16,6 +17,10 @@ class App {
         this.Lenis = new Lenis({
             lerp: 0.15,
         });
+    }
+
+    _createButtonsAnimation() {
+        const buttons = [...document.querySelectorAll('[data-animation="button"]')]
     }
 
     _createTextReveals(){

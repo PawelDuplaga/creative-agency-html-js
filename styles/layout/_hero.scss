@@ -18,6 +18,14 @@
         color: $color-text-light;
     }
 
+    span {
+        color: $color-text-dark;
+    }
+    
+    span span {
+        color: $color-text-white;
+    }
+
     &__play {
         @include center-align;
         
