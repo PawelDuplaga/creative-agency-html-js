@@ -13,6 +13,10 @@
     width: max-content;
     height: max-content;
 
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+
     &--dark {
         background-color: $color-button-dark;
         color: $color-button-text-light
@@ -24,6 +28,31 @@
     
         svg path {
             fill: $color-button-text-dark;
+        }
+    }
+
+    &[data-animation="button"] {
+
+        transform: scale(0);
+        transform-origin: 50% 50%;
+        
+        > span {
+            display: inline-block;
+            width: 0px;
+            overflow: hidden;
+        }
+
+        > span span {
+            display: inline-block;
+            transform: translateY(16px);
+            white-space: nowrap;
+        }
+
+        svg {
+            width: 0px;
+            overflow: hidden;
+            transform: translateX(-8px);
+            opacity: 0;
         }
     }
 

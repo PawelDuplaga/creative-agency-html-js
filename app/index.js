@@ -2,6 +2,7 @@ import '../styles/index.scss';
 import Lenis from '@studio-freight/lenis';
 import Observer from './classes/Observer';
 import TextReveal from './animations/TextReveal';
+import ButtonAnimation from './animations/ButtonAnimation';
 
 class App {
     constructor(){
@@ -21,6 +22,12 @@ class App {
 
     _createButtonsAnimation() {
         const buttons = [...document.querySelectorAll('[data-animation="button"]')]
+
+        buttons.forEach(button => {
+            new ButtonAnimation({
+                element: button,
+            })
+        })
     }
 
     _createTextReveals(){
