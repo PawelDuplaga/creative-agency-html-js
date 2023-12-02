@@ -3,13 +3,14 @@ import Lenis from '@studio-freight/lenis';
 import Observer from './classes/Observer';
 import TextReveal from './animations/TextReveal';
 import ButtonAnimation from './animations/ButtonAnimation';
+import ParallaxImage from './animations/ParallaxImage';
 
 class App {
     constructor(){
+        this._createLenis();
         this._createTextReveals();
         this._createButtonsAnimation()
-        this._createObserver();
-        this._createLenis();
+        this._createParallaxImage();
         this._render();
     }
 
@@ -30,9 +31,21 @@ class App {
         })
     }
 
+    _createParallaxImage() {
+        const images = [...document.querySelectorAll('[data-animation="parallax-image"]')]
+
+        console.log(images);
+        
+        images.forEach(element => {
+            new ParallaxImage({
+                imageSection: element,
+            })
+        })
+
+    }
+
     _createTextReveals(){
         const textItems = [...document.querySelectorAll('[data-animation="text-reveal"]')]
-        console.log(textItems);
 
         textItems.forEach(text => {
             new TextReveal({

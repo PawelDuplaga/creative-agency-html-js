@@ -11,8 +11,8 @@ export default class ButtonAnimation extends Observer {
         this.icon = element.querySelector('svg');
         this.timeline = gsap.timeline({
             defaults: {
-                duration: 0.8,
-                ease: 'power3',
+                duration: 1,
+                ease: 'circ.out',
             }
         });
     }
