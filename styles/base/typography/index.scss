@@ -36,7 +36,7 @@ h6 {
 
 h1,
 .h1 {
-  @include fluid-type(430px, 1440px, 32px, 72px);
+  @include fluid-type(430px, 2400px, 32px, 96px);
   margin-bottom: 64px;
   line-height: 1.3;
 }

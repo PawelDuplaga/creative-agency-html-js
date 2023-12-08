@@ -4,6 +4,7 @@ import Observer from './classes/Observer';
 import TextReveal from './animations/TextReveal';
 import ButtonAnimation from './animations/ButtonAnimation';
 import ParallaxImage from './animations/ParallaxImage';
+import List from './animations/List';
 
 class App {
     constructor(){
@@ -11,6 +12,7 @@ class App {
         this._createTextReveals();
         this._createButtonsAnimation()
         this._createParallaxImage();
+        this._createList();
         this._render();
     }
 
@@ -19,6 +21,18 @@ class App {
         this.Lenis = new Lenis({
             lerp: 0.15,
         });
+    }
+
+    _createList() {
+        const lists = [
+            ...document.querySelectorAll('.list__item')
+        ]
+
+        lists.forEach(list => {
+            new List({
+                element: list,
+            })
+        })
     }
 
     _createButtonsAnimation() {
