@@ -6,9 +6,9 @@
     align-items: center;
     padding: 24px 0;
 
-    @include fluid-type(430px, 1440px, 24px, 36px);
+    @include fluid-type(430px, 1440px, 20px, 28px);
     color: $color-text-dark;
-    
+
     &__hamburger {
         border: none;
         display: flex;
