@@ -1,12 +1,12 @@
 @import './type-scale';
 @import '../../abstracts/variables';
 
-// @font-face {
-//   font-family: 'PP Neue Regular';
-//   src: url('./fonts/ppneue.woff2') format('woff2');
-//   font-weight: 400;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'PP Neue Regular';
+  src: url('/fonts/ppneue.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 
 html {
   font-size: calc(100vw / $desktop-width * 10);
